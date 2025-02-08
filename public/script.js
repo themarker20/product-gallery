@@ -4,7 +4,7 @@ document.getElementById("loginForm")?.addEventListener("submit", async (e) => {
   const name = document.getElementById("name").value;
   const phone = document.getElementById("phone").value;
 
-  const response = await fetch("https://gleaming-puffpuff-232788.netlify.app/api/login", {
+  const response = await fetch("/api/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name, phone }),
@@ -22,7 +22,7 @@ document.getElementById("adminForm")?.addEventListener("submit", async (e) => {
   e.preventDefault();
   const password = document.getElementById("password").value;
 
-  const response = await fetch("https://gleaming-puffpuff-232788.netlify.apphttps://gleaming-puffpuff-232788.netlify.app/api/users", {
+  const response = await fetch("/api/users", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ password }),
@@ -40,7 +40,7 @@ document.getElementById("adminForm")?.addEventListener("submit", async (e) => {
 
 // Load users
 async function loadUsers() {
-  const response = await fetch("https://gleaming-puffpuff-232788.netlify.apphttps://gleaming-puffpuff-232788.netlify.app/api/users", {
+  const response = await fetch("/api/users", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ password: "admin123" }), // Send the admin password
@@ -64,7 +64,7 @@ async function loadUsers() {
 
 // Load products
 async function loadProducts() {
-  const response = await fetch("https://gleaming-puffpuff-232788.netlify.apphttps://gleaming-puffpuff-232788.netlify.app/api/products");
+  const response = await fetch("/api/products");
   const products = await response.json();
 
   const productsTable = document
@@ -104,7 +104,7 @@ async function loadProducts() {
 
 // Delete product
 async function deleteProduct(productId) {
-  const response = await fetch(`https://gleaming-puffpuff-232788.netlify.apphttps://gleaming-puffpuff-232788.netlify.app/api/delete-product`, {
+  const response = await fetch(`/api/delete-product`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ productId }),
@@ -131,7 +131,7 @@ function editProduct(product) {
 
 // Update product
 async function updateProduct(productId, name, image, description, price) {
-  const response = await fetch(`https://gleaming-puffpuff-232788.netlify.apphttps://gleaming-puffpuff-232788.netlify.app/api/update-product`, {
+  const response = await fetch(`/api/update-product`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ productId, name, image, description, price }),
@@ -163,7 +163,7 @@ document
     formData.append("description", description);
     if (price) formData.append("price", price);
 
-    const response = await fetch("https://gleaming-puffpuff-232788.netlify.apphttps://gleaming-puffpuff-232788.netlify.app/api/add-product", {
+    const response = await fetch("/api/add-product", {
       method: "POST",
       body: formData, // Send FormData instead of JSON
     });
@@ -183,7 +183,7 @@ if (window.location.pathname.endsWith("gallery.html")) {
 
 // Load products for the gallery page
 async function loadGalleryProducts() {
-  const response = await fetch("https://gleaming-puffpuff-232788.netlify.apphttps://gleaming-puffpuff-232788.netlify.app/api/products");
+  const response = await fetch("/api/products");
   const products = await response.json();
 
   const productsContainer = document.getElementById("products");
@@ -210,7 +210,7 @@ async function loadGalleryProducts() {
       const productId = button.getAttribute("data-id");
       const phone = localStorage.getItem("phone"); // Ensure the phone number is stored in localStorage
 
-      const response = await fetch("https://gleaming-puffpuff-232788.netlify.apphttps://gleaming-puffpuff-232788.netlify.app/api/like", {
+      const response = await fetch("/api/like", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ productId: parseInt(productId), phone }),
