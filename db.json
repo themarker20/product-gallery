@@ -1,4 +1,10 @@
 {
-  "users": [],
+  "users": [
+    {
+      "name": "ahmed",
+      "phone": "4654",
+      "likedProducts": []
+    }
+  ],
   "products": []
 }
