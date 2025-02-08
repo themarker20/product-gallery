@@ -3,7 +3,7 @@
   publish = "public"
 
 [build.environment]
-  ADMIN_PASSWORD = "your_secure_password"
+  ADMIN_PASSWORD = "admin123"
 
 [[redirects]]
   from = "/api/*"
