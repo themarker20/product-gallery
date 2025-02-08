@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="admin-container">
+    <h1>صفحة المسئول</h1>
+    <form id="adminForm">
+      <input type="password" id="password" placeholder="Enter Admin Password" required>
+      <button type="submit">تصريح الدخول</button>
+    </form>
+
+    <!-- Admin Content (Hidden by Default) -->
+    <div id="adminContent" style="display: none;">
+      <!-- Users Table -->
+      <h2>بيانات العملاء الحاليين</h2>
+      <table id="usersTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>المنتجات المفضلة</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <!-- Products Table -->
+      <h2>المنتجات</h2>
+      <table id="productsTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Likes</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <!-- Add Product Form -->
+      <h2>Add Product</h2>
+      <form id="addProductForm">
+        <input type="text" id="productName" placeholder="إسم المنتج" required>
+        <input type="file" id="productImage" accept="image/*" required>
+        <input type="text" id="productDescription" placeholder="وصف المنتج" required>
+        <input type="number" id="productPrice" placeholder="سعر المنتج (إختيارى)">
+        <button type="submit">Add Product</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
