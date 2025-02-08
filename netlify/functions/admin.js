@@ -5,10 +5,10 @@ exports.handler = async (event) => {
   const { password } = JSON.parse(event.body);
 
   // Check admin password
-  if (password !== 'admin123') {
+  if (password !== process.env.ADMIN_PASSWORD) {
     return {
       statusCode: 401,
-      body: JSON.stringify({ error: 'Unauthorized' }),
+      body: JSON.stringify({ error: "Unauthorized" }),
     };
   }
 

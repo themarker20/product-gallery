@@ -88,6 +88,11 @@ button:hover {
   background: #0056b3;
 }
 
+.admin-container{
+  height: auto;
+  margin-top: 300px;
+}
+
 #adminContent h2 {
   padding: 40px 0 20px;
 }
