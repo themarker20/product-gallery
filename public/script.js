@@ -4,7 +4,7 @@ document.getElementById("loginForm")?.addEventListener("submit", async (e) => {
   const name = document.getElementById("name").value;
   const phone = document.getElementById("phone").value;
 
-  const response = await fetch("/api/login", {
+  const response = await fetch("/netlify/functions/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name, phone }),
