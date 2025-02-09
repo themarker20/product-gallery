@@ -2,12 +2,7 @@
   "users": [
     {
       "name": "ahmed",
-      "phone": "4654",
-      "likedProducts": []
-    },
-    {
-      "name": "samy",
-      "phone": "4545422",
+      "phone": "0120056452",
       "likedProducts": [
         "product"
       ]
@@ -20,7 +15,7 @@
       "image": "1738979192220-pexels-fauxels-3183165.jpg",
       "description": "product description",
       "price": "140",
-      "likes": 1
+      "likes": 3
     }
   ]
 }

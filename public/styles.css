@@ -4,15 +4,15 @@
 body {
   font-family: "Alexandria", serif;
   margin: 0;
-  padding: 30px 0;
+  padding: 50px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   background-color: #f4f4f4;
 }
 
 .login-container, .gallery-container, .admin-container {
+  min-height: 100vh;
   background: #fff;
   padding: 20px;
   border-radius: 8px;
@@ -86,11 +86,6 @@ button:hover {
 
 .like-btn:hover {
   background: #0056b3;
-}
-
-.admin-container{
-  height: auto;
-  margin-top: 300px;
 }
 
 #adminContent h2 {
