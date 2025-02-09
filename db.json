@@ -6,6 +6,11 @@
       "likedProducts": [
         "product"
       ]
+    },
+    {
+      "name": "ahmed",
+      "phone": "045022",
+      "likedProducts": []
     }
   ],
   "products": [

@@ -1,10 +1,6 @@
 [build]
-  command = "npm install"
-  publish = "public"
   functions = "netlify/functions"
 
-[build.environment]
-  ADMIN_PASSWORD = "admin123"
 
 [[redirects]]
   from = "/api/*"
